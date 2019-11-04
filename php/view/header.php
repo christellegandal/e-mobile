@@ -31,8 +31,8 @@
   	<!-- Navbar content -->
     <nav class="navbar-expand-lg navbar-dark bg-dark" id="menu" >
 	  <h1 class="navbar-brand">NOS TELEPHONES</h1>
-	  <button type="button" id="panier" data-toggle="modal" data-target="#myModalAjouter"><i id="monIconPanier"class="fas fa-shopping-basket fa-2x"></i></button>
-	  <span id="score">0</span>
+	  <div id="achat"><button type="button" id="panier" data-toggle="modal" data-target="#myModalAjouter"><i id="monIconPanier"class="fas fa-shopping-basket fa-2x"></i></button>
+	  <span id="score">0</span></div>
     </nav>
   
   	<div id="containerModal">

@@ -3,8 +3,6 @@ body{
   background-color: #DFE3E1;
 }
 h1.navbar-brand{
-  display: flex;
-  flex-wrap: wrap;
   font-size: 5vw;
   margin-top: 2%;
   margin-bottom: 2%;
@@ -23,6 +21,11 @@ h1.navbar-brand{
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+#achat{
+  display: flex;
+  flex-wrap: wrap;
 }
 #score{
   background-color: white;
@@ -34,7 +37,10 @@ h1.navbar-brand{
   color: black;
   padding-top: 5px;
   padding-left: 22px;
-    border-radius: 5px;
+  border-radius: 5px;
+  position: relative;
+  top: -23px;
+  left:-10px;
 }
 span #score{
   display: flex;
@@ -89,6 +95,7 @@ button#panier{
 }
 .card{
   position: static;
+  width: 90%;
 }
   .card-header{
     background-color: #1ADC9E;
@@ -108,7 +115,15 @@ p{
   font-size: 20px;
 }
 .card-body{
+  display: flex;
+  flex-direction: column;
   padding-bottom: 0;
+}
+.card-img-top{
+  width:200px;
+  height:200px;
+  object-fit: cover;
+  margin: auto;
 }
 #promo{
   background-color: #D60BCA;
@@ -248,9 +263,6 @@ span#score
   border-color: black;
 }
 
-img {
-   width: 100px;
-}
   ul {
   background-color: gray;
   width: 500px;
@@ -275,6 +287,7 @@ a{
 .listeAnnonce {
   display:flex;
   flex-wrap: wrap;
+  justify-content: center;
   width:100%;
 }
 
@@ -282,12 +295,6 @@ a{
   width: calc(100% /3);
 }
 
-
-img{
-  width:100%;
-  height:calc(100vw / 3);
-  object-fit:cover;
-}
 
 p{
   padding:1rem;
@@ -342,9 +349,7 @@ nav a {
   text-decoration: none;
 }
 
-img {
-  width:100%;
-} 
+
 
 /* GALERIE */
 
@@ -443,11 +448,23 @@ button.delete, button.update {
   border-radius:1rem;
   text-align:center;
 }
+/* MEDIA QUERIES (APRES LES REGLES SANS MEDIA QUERIES */
 @media (min-width: 768px)
 {
+  #achat{
+    width: 20%;
+  }
+  span#score{
+    left: -30px;
+  }
   .listeAnnonce{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .card{
+    width: 30%;
+
   }
 } 
 @media screen and (max-width: 425px) {
@@ -457,7 +474,7 @@ button.delete, button.update {
   }
       
 }
-/* MEDIA QUERIES (APRES LES REGLES SANS MEDIA QUERIES */
+
 @media screen and (max-width: 425px) {
   /* ON REDUIT LE NOMBRE DE COLONNES SI ON EST SUR UN PETIT ECRAN*/
   .listePhoto img {
